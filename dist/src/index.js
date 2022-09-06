@@ -28,7 +28,7 @@ async function main() {
     core.debug(`Config extracted from job: ${config}`);
     const bench = await (0, extract_1.extractResult)(config);
     core.debug(`Benchmark result was extracted: ${bench}`);
-    await (0, write_1.writeBenchmark)(bench, config);
+//     await (0, write_1.writeBenchmark)(bench, config);
     console.log('github-action-benchmark was run successfully!', '\nData:', bench);
 }
 main().catch((e) => core.setFailed(e.message));
