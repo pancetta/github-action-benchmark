@@ -347,7 +347,7 @@ async function writeBenchmarkToGitHubPagesWithRetry(bench, config, retry) {
     await storeDataJs(dataPath, data);
     await git.cmd(extraGitArguments, 'add', path.join(benchmarkDataRelativeDirPath, 'data.js'));
     await addIndexHtmlIfNeeded(extraGitArguments, benchmarkDataRelativeDirPath, benchmarkBaseDir);
-    await git.cmd(extraGitArguments, 'commit', '-m', `add ${name} (${tool}) benchmark result for ${bench.commit.id}`);
+//     await git.cmd(extraGitArguments, 'commit', '-m', `add ${name} (${tool}) benchmark result for ${bench.commit.id}`);
     if (githubToken && autoPush) {
         try {
             await git.push(githubToken, ghRepository, ghPagesBranch, extraGitArguments);
